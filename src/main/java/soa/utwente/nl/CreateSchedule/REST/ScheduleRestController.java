@@ -12,7 +12,8 @@ public class ScheduleRestController {
     @Autowired private ScheduleService service;
 
         @GetMapping(value="/createSchedule/{id}")
-    public void createSchedule(@PathVariable Integer id){
+        public boolean createSchedule(@PathVariable Integer id){
             System.out.println("Call");
-            service.CreateSchedule(id);}
+            return service.CreateSchedule(id);}
+
 }
